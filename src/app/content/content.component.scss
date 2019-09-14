@@ -1,0 +1,26 @@
+.masthead
+{
+    background-color: #1abc9c;
+    padding-top:100px;
+    padding-bottom: 100px;
+
+    .masthead-avatar
+    {
+        width: 250px;
+        height: 250px;
+    }
+    .masthead-heading
+    {
+        font-size: 4rem;
+        line-height: 3.5rem;
+        font-weight: bolder;
+    }
+
+    .masthead-subheading
+    {
+        font-size: 1.55rem;
+       
+    }
+   
+   
+}

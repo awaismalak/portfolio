@@ -1,0 +1,35 @@
+<!-- Portfolio Modal 1 -->
+<div id="portfolioModal">
+        <div class="container">
+                <button (click)="onClose.emit()" type="button"  class="float-right cross_icon">
+                        <span>
+                            <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                        </span>
+                </button>
+            <div class="row sub_container">
+                <div class="col-lg-8 offset-lg-2 text-center" >
+                    <!-- Portfolio Modal - Title -->
+                    <h2 class="text-uppercase heading star_dark">Log Cabin</h2>
+                    <!-- Icon Divider -->
+                    <div class="divider-custom">
+                        <div class="divider-custom-line dark_bg"></div>
+                        <div class="divider-custom-icon  star_dark">
+                                <fa-icon [icon]="['fas', 'star']" [spin]="true"></fa-icon>
+
+                        </div>
+                        <div class="divider-custom-line dark_bg"></div>
+                    </div>
+                    <!-- Portfolio Modal - Image -->
+                    <img class="img-fluid rounded mb-5" src="../../../../assets/images/cabin.png" alt="">
+                    <!-- Portfolio Modal - Text -->
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda
+                        ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae?
+                        Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                    <button class="btn btn-primary close_btn" href="#">
+                            <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                        Close Window 
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,6 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
 body
 {
-    margin: 0px;
+    margin-top: 100px !important;
     padding: 0px;
 }
+.white_bg
+{
+    background-color: #fff;
+}
+.dark_bg
+{
+    background-color: #2c3e50;
+    
+}
+.star_dark
+{
+    color: #2c3e50;
+}
+.divider-custom
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    .divider-custom-line
+    {
+       width: 80px;
+       height: 5px;
+      
+       margin: 10px;
+       
+    }
+}
+.heading
+{
+    font-size: 3rem;
+    font-weight: bolder;
+      
+}
+
+
+
+
+// for star controll code is here
+
+// .divider-custom-icon{
+//     border:1px solid;
+//     position: absolute;
+//     fa-icon
+//     {
+//         font-size: 2rem;
+//     }
+// }

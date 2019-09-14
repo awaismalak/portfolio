@@ -1,0 +1,64 @@
+#portfolioModal
+{
+   
+    padding-top: 50px;
+    position: fixed;
+    z-index: 222222222;
+    width: 100%;
+    display: block;
+    height: 86vh;
+    top: 0;
+    background-color: rgba(black, 0.5);
+    overflow: auto;
+    height: 100%;
+    
+
+
+   
+
+    .container
+    {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding-bottom: 30px;
+        margin-bottom: 50px;
+        
+        
+       
+        .cross_icon
+        {
+            color: #1abc9c;
+            font-size: 3rem;
+            background-color: #ffffff;
+            border: 0px solid;
+            outline: none;
+            &:hover
+            {
+                color: #20c997;
+                transition: 0.4s ease-in-out;
+
+            }
+        }
+        .row
+        {
+            padding-top: 50px;
+
+            .text
+            {
+                margin-bottom: 3rem;
+                font-size: 15px;
+            }
+            .close_btn
+            {
+                background-color: #1abc9c;
+                border-color: #1abc9c;
+                transition: 0.4s ease-in-out;
+
+                &:hover
+                {
+                    background-color: #148f77;
+                }
+            }
+        }
+    }
+}

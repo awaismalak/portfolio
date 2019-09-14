@@ -1,0 +1,56 @@
+
+  <!-- Contact Section -->
+  <section  id="contact">
+    <div class="container">
+
+      <!-- Contact Section Heading -->
+      <h2 class=" text-center text-uppercase heading" >Contact Me</h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom">
+        <div class="divider-custom-line dark_bg"></div>
+        <div class="divider-custom-icon">
+            <fa-icon [icon]="star" [spin]="true"></fa-icon>
+        </div>
+        <div class="divider-custom-line dark_bg"></div>
+      </div>
+
+
+
+      <!-- Contact Section Form -->
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <form name="sentMessage"  novalidate="novalidate">
+            <div class="control-group" >
+              <div class="form-group ">
+                <input  class="form-control" type="text" placeholder="Name" required="required" >
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group ">
+                <input  class="form-control" id="email" type="email" placeholder="Email Address" required="required"  style="outline: none;">
+              </div>
+            </div>
+            <div class="control-group">
+              <div>               
+                <input class="form-control" id="phone" type="tel" placeholder="Phone Number"required="required">
+                
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group  ">
+               
+                <textarea  class="form-control" rows="5" placeholder="Message" required="required"></textarea>
+               
+              </div>
+            </div>
+            <br>
+            <div class="form-group">
+              <button type="submit" class="button_form" id="sendMessageButton">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>

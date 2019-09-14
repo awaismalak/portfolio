@@ -1,0 +1,60 @@
+<section class="page-section portfolio">
+  <div class="container">
+
+    <!-- Portfolio Section Heading -->
+    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+
+    <!-- Icon Divider -->
+    <div class="divider-custom ">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon star_dark">
+        <fa-icon [icon]="star" [spin]="true"></fa-icon>
+      </div>
+      <div class="divider-custom-line"></div>
+    </div>
+
+
+    <!-- Portfolio Grid Items -->
+    <div class="row">
+
+      <!-- Portfolio Item 1 -->
+
+
+
+
+
+
+
+
+
+      <!-- Portfolio Item 2 -->
+
+
+
+      <div class="item col-md-6 col-lg-4" *ngFor="let image of images; let i=index" (click)="showDialog(i)">
+        <div class="image_container">
+          <img class="img-fluid" src="../../assets/images/{{image.image}}" />
+          <div class="portfolio-item-layer text-center text-white">
+            <fa-icon [icon]="plus"></fa-icon>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+
+
+
+  <app-dialog (onClose)="close()" *ngIf="isvisibleDialog==true"></app-dialog>
+
+
+
+
+</section>

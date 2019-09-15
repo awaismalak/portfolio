@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { SharedService } from '../shared/services/shared.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { from } from 'rxjs';
+import { Location } from '@angular/common';
+import { Route } from '@angular/compiler/src/core';
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
@@ -16,24 +18,48 @@ export class PortfolioComponent implements OnInit {
   images = [];
   isvisibleDialog = false;
 
+
   constructor(private sharedservice: SharedService,
+    private location: Location,
+    private route: ActivatedRoute,
     private routerService: Router) {
-    this.images = this.sharedservice.portfoli;
+    this.images = this.sharedservice.portfolioImage;
 
   }
 
   ngOnInit() {
+ 
   }
 
-  showDialog(index) {
+
+  openPortfolioItem(index) {
+
+    this.routerService.navigateByUrl('/portfolio/' + index);
     this.isvisibleDialog = true;
-    document.body.style.overflow = 'hidden';
-    this.routerService.navigateByUrl('/' + index);
-
+    document.body.style.overflow='hidden';
   }
 
-  close(){
-    this.isvisibleDialog = false;
-    document.body.style.overflow = 'visible';
+
+
+  onClose()
+  {
+
+    this.isvisibleDialog= false;
+    document.body.style.overflow='visible';
   }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

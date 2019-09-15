@@ -4,6 +4,7 @@ import { PortfolioComponent } from '../../src/app/portfolio/portfolio.component'
 import {AboutComponent} from '../app/about/about.component';
 import { ContactComponent } from '../app/contact/contact.component';
 import { ContentComponent } from '../app/content/content.component';
+import { DialogComponent } from '../app/shared/components/dialog/dialog.component';
 import { from } from 'rxjs';
 
 

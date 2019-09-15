@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SharedService {
-portfoli =[
+portfolioImage =[
   {'image':'cabin.png'},
   {'image':'cake.png'},
   {'image':'circus.png'},

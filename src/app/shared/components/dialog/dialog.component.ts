@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./dialog.component.scss']
 })
 export class DialogComponent implements OnInit {
-  test = false;
+  isReady = false;
 
   portfolioImage: any = {};
   @Output('onClose') onClose: EventEmitter<any> = new EventEmitter();
@@ -24,9 +24,15 @@ export class DialogComponent implements OnInit {
 
   ngOnInit() {
     
+    setTimeout(()=>{this.isReady=true;},0);
+  }
+ 
+  closeDialog()
+  {
+    this.isReady = false;
+   setTimeout(()=>{this.onClose.emit()},400);
 
   }
-
 }
 
 

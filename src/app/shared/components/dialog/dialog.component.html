@@ -1,7 +1,7 @@
 <!-- Portfolio Modal 1 -->
-<div id="portfolioModal" [ngClass]="{'ready':test==true} " >
+<div id="portfolioModal" [ngClass]="{'ready': isReady== true} " >
     <div class="container">
-            <button (click)="onClose.emit()" type="button"  class="float-right cross_icon">
+            <button (click)="closeDialog()" type="button"  class="float-right cross_icon">
                     <span>
                         <fa-icon [icon]="['fas', 'times']"></fa-icon>
                     </span>

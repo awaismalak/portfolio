@@ -1,6 +1,6 @@
 <!-- Portfolio Modal 1 -->
-<div id="portfolioModal" [ngClass]="{'ready': isReady== true} " >
-    <div class="container">
+<div id="portfolioModal" [ngClass]="{'ready': isReady== true} "  (click)="closeDialog()">
+    <div class="container" (click)="$event.stopPropagation()">
             <button (click)="closeDialog()" type="button"  class="float-right cross_icon">
                     <span>
                         <fa-icon [icon]="['fas', 'times']"></fa-icon>
@@ -25,7 +25,7 @@
                 <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda
                     ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae?
                     Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                <button class="btn btn-primary close_btn" href="#">
+                <button class="btn btn-primary close_btn" href="#" (click)="closeDialog()">
                         <fa-icon [icon]="['fas','times']"></fa-icon>
                     Close Window 
                 </button>

@@ -13,15 +13,10 @@
     background-color: rgba(black, 0.5);
     overflow: auto;
     height: 100%;
-    opacity: 0;
-    transition: all 0.4s ease-in-out;
+    opacity: 1;
 
 
- &.ready{
-       opacity:1;
-       
-   }
-    
+
 
 
    
@@ -32,7 +27,12 @@
         border-radius: 10px;
         padding-bottom: 30px;
         margin-bottom: 50px;
-        
+        transform: translateY(-100px);
+        transition: 0.4s ease-in-out;
+        opacity: 0;
+         transform: rotate(380deg) scale(0.5);
+      
+
  
        
         .cross_icon
@@ -71,4 +71,15 @@
             }
         }
     }
+    &.ready{
+       
+      .container{
+        transform: translateY(0px); opacity:1;   
+        transform: rotate(0deg) scale(1);
+
+       
+
+      }
+    }
+     
 }

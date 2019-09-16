@@ -9,7 +9,7 @@
         <div class="row sub_container">
             <div class="col-lg-8 offset-lg-2 text-center" >
                 <!-- Portfolio Modal - Title -->
-                <h2 class="text-uppercase heading star_dark">Log Cabin</h2>
+                <h2 class="text-uppercase heading star_dark">{{portfolioImage.title}}</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                     <div class="divider-custom-line dark_bg"></div>
@@ -22,9 +22,7 @@
                 <!-- Portfolio Modal - Image -->
                 <img class="img-fluid rounded mb-5" src="/assets/images/{{portfolioImage.image}}" alt="">
                 <!-- Portfolio Modal - Text -->
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda
-                    ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae?
-                    Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <p class="text">{{portfolioImage.description}}</p>
                 <button class="btn btn-primary close_btn" href="#" (click)="closeDialog()">
                         <fa-icon [icon]="['fas','times']"></fa-icon>
                     Close Window 

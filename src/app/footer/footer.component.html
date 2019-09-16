@@ -1,43 +1,34 @@
 <footer class="footer text-center">
-    <div class="container">
-      <div class="row">
+  {{icons[0].google | json}}
+  <div class="container">
+    <div class="row">
 
-        <!-- Footer Location -->
-        <div class="col-lg-4 mb-5 ">
-          <h4 class="text-uppercase fo_heading ">Location</h4>
-          <p class="lead">2215 John Daniel Drive
-            <br>Clark, MO 65243</p>
-        </div>
+      <!-- Footer Location -->
+      <div class="col-lg-4 mb-5 ">
+        <h4 class="text-uppercase fo_heading ">Location</h4>
+        <p class="lead">2215 John Daniel Drive
+          <br>Clark, MO 65243</p>
+      </div>
 
-        <!-- Footer Social Icons -->
-        <div class="col-lg-4 mb-5">
-          <h4 class="text-uppercase fo_heading">Around the Web</h4>
-          <a class="btn btn-outline-light btn-social" href="#">
-            
-            <fa-icon icon='google' ></fa-icon>
+      <!-- Footer Social Icons -->
+      <div class="col-lg-4 mb-5">
+        <h4 class="text-uppercase fo_heading">Around the Web</h4>
+        <a class="btn btn-outline-light btn-social" href="#" *ngFor="let icon of icons">
 
-          </a>
-          <a class="btn btn-outline-light btn-social" href="#">
-            <fa-icon icon='twitter' ></fa-icon>
-          </a>
-          <a class="btn btn-outline-light btn-social" href="#">
-            
-            <fa-icon icon='linkedin-in' ></fa-icon>
 
-          </a>
-          <a class="btn btn-outline-light btn-social" href="#">
-            <fa-icon icon='dribbble' [spin]="true" ></fa-icon>
+          <fa-icon icon='{{icon}}'></fa-icon>
 
-          </a>
-        </div>
-
-        <!-- Footer About Text -->
-        <div class="col-lg-4 fo_text">
-          <h4 class="text-uppercase fo_heading" >About Freelancer</h4>
-          <p class="lead">Freelance is a free to use, MIT licensed Bootstrap theme created by
-            <a href="#">Start Bootstrap</a>.</p>
-        </div>
+        </a>
 
       </div>
+
+      <!-- Footer About Text -->
+      <div class="col-lg-4 fo_text">
+        <h4 class="text-uppercase fo_heading">About Freelancer</h4>
+        <p class="lead">Freelance is a free to use, MIT licensed Bootstrap theme created by
+          <a href="#">Start Bootstrap</a>.</p>
+      </div>
+
     </div>
-  </footer>
+  </div>
+</footer>

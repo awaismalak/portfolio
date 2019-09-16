@@ -60,17 +60,3 @@ export class DialogComponent implements OnInit {
 
 
 
-
-
-
-// ngOnInit() {
-    
-//   //  setTimeout((()=>{ this.ready = true;}), 0);
-//   }
-
-  // close(){
-  //   this.ready = false;
-  //   setTimeout(()=>{
-  //     this.onClose.emit()
-  //   }, 400);
-  // }

@@ -8,6 +8,12 @@ import { faGasPump } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
+
+icons =
+[
+  'google','twitter',"linkedin-in",'dribbble'
+]
+
   constructor() { }
 
   ngOnInit() {

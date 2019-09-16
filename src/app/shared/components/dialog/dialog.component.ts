@@ -29,9 +29,13 @@ export class DialogComponent implements OnInit {
  
   closeDialog()
   {
-    this.isReady = false;
+    this.hideDialog();
    setTimeout(()=>{this.onClose.emit()},400);
 
+  }
+
+  hideDialog(){
+    this.isReady = false;
   }
 }
 

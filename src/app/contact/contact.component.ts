@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { Validator, FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { from } from 'rxjs';
+
 
 @Component({
   selector: 'app-contact',
@@ -7,10 +10,30 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+
   star = faStar;
-  constructor() { }
+  form: FormGroup;
+  nameControl = new FormControl();
+
+  constructor(
+    private fb: FormBuilder
+  ) {
+    this.form = this.fb.group({
+      name: ['', [Validators.required]],
+      phone: ['', [Validators.required]],
+      message: ['', [Validators.required]],
+      email: ['', [Validators.required]]
+    })
+
+  }
 
   ngOnInit() {
   }
+
+  onSubmit() {
+    alert('Hello World !')
+  }
+
+
 
 }

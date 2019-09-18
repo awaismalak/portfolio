@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { from } from 'rxjs';
 import { FontAwesomeModule, FaIconLibrary, FaConfig } from '@fortawesome/angular-fontawesome';
+import {ReactiveFormsModule} from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab, faTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -34,7 +35,8 @@ import { DialogComponent } from './shared/components/dialog/dialog.component';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]

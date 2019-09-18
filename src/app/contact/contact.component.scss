@@ -46,7 +46,20 @@ form
         
         } 
 
-        
+       .error
+       {
+           text-align: center;
+           font-size: 12px;
+           color: red;
+
+           p
+           {
+            margin-top: 0px; 
+            margin-bottom: 0px;
+            padding: 5px;
+            font-family:cursive;
+           }
+       } 
         
     } 
    

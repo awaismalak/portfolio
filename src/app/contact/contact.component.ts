@@ -13,6 +13,7 @@ export class ContactComponent implements OnInit {
 
   star = faStar;
   form: FormGroup;
+  submitted = false;
   nameControl = new FormControl();
 
   constructor(
@@ -20,9 +21,9 @@ export class ContactComponent implements OnInit {
   ) {
     this.form = this.fb.group({
       name: ['', [Validators.required]],
-      phone: ['', [Validators.required]],
-      message: ['', [Validators.required]],
-      email: ['', [Validators.required]]
+      phone: ['', [Validators.required, Validators.maxLength(11)]],
+      message: ['', [Validators.required, Validators.maxLength(50)]],
+      email: ['', [Validators.required, Validators.email]]
     })
 
   }
@@ -31,7 +32,14 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
-    alert('Hello World !')
+    this.submitted = true;
+    if (this.form.invalid) {
+      return;
+  }
+  else
+  {
+    alert("Form submit")
+  }
   }
 
 

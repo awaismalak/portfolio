@@ -1,83 +1,85 @@
+<!-- Contact Section -->
+<section id="contact">
+  <div class="container">
 
-  <!-- Contact Section -->
-  <section  id="contact">
-    <div class="container">
+    <!-- Contact Section Heading -->
+    <h2 class=" text-center text-uppercase heading">Contact Me</h2>
 
-      <!-- Contact Section Heading -->
-      <h2 class=" text-center text-uppercase heading" >Contact Me</h2>
-
-      <!-- Icon Divider -->
-      <div class="divider-custom">
-        <div class="divider-custom-line dark_bg"></div>
-        <div class="divider-custom-icon">
-            <fa-icon [icon]="star" [spin]="true"></fa-icon>
-        </div>
-        <div class="divider-custom-line dark_bg"></div>
+    <!-- Icon Divider -->
+    <div class="divider-custom">
+      <div class="divider-custom-line dark_bg"></div>
+      <div class="divider-custom-icon">
+        <fa-icon [icon]="star" [spin]="true"></fa-icon>
       </div>
+      <div class="divider-custom-line dark_bg"></div>
+    </div>
 
 
 
-      <!-- Contact Section Form -->
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-          <form (submit)="onSubmit()" [formGroup]="form">
-            <div class="control-group" >
-              <div class="form-group ">
-                <input class="form-control" type="text" placeholder="Name" formControlName="name" >
-              </div>
-
-              <div class="error" *ngIf="form.get('name').invalid && form.get('name').dirty">
-                  <p>Invalid name</p>
-              </div>
-
-            </div>
-            <div class="control-group">
-              <div class="form-group ">
-                <input  class="form-control" id="email" type="email" placeholder="Email Address" formControlName="email"  style="outline: none;">
-              </div>
-              <div class="error" *ngIf="form.get('email').invalid && form.get('email').dirty">
-                  <p>Invalid email</p>
-              </div>
+    <!-- Contact Section Form -->
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <form (submit)="onSubmit()" [formGroup]="form">
+          <div class="control-group">
+            <div class="form-group ">
+              <input class="form-control" type="text" placeholder="Name" formControlName="name">
             </div>
 
+            <div class="error" *ngIf="form.get('name').invalid && form.get('name').dirty">
+              <p>Invalid name</p>
+            </div>
 
-           
+          </div>
 
-            <div class="control-group">
-              <div>               
-                <input class="form-control"  id="phone" type="tel" placeholder="Phone Number" formControlName="phone">
-                
-              </div>
+          <div class="control-group">
+            <div class="form-group ">
+              <input class="form-control" id="email" type="email" placeholder="Email Address" formControlName="email"
+                style="outline: none;">
+            </div>
+            <div class="error" *ngIf="submitted && form.get('email').invalid && form.get('email').dirty">
+              <p>Invalid email</p>
+            </div>
+          </div>
 
+        
+          <div class="control-group">
+            <div>
+              <input class="form-control" id="phone" type="tel" placeholder="Phone Number" formControlName="phone">
+            </div>
+            <div class="section">
             <div class="error" *ngIf="form.get('phone').invalid && form.get('phone').dirty">
                 <p class="text">Invalid Phone Number</p>
               </div>
-            </div>
-            <div class="control-group">
-              <div class="form-group  ">
-               
-                <textarea  class="form-control"  rows="5" placeholder="Message" formControlName="message" ></textarea>
-               
+              <div class="error" *ngIf="form.get('phone').invalid && form.get('phone').errors['maxlength']">
+                <p class="text">Phone number is not greater then 11 length...</p>
               </div>
+            </div>
+          </div>
+
+
+
+          <div class="control-group">
+            <div class="form-group  ">
+
+              <textarea class="form-control" rows="5" placeholder="Message" formControlName="message"></textarea>
+
+            </div>
 
             <div class="error" *ngIf="form.get('message').invalid && form.get('message').dirty">
-                <p>Invalid Message</p>
-              </div>
+              <p>Invalid Message</p>
             </div>
-            <br>
-           
-            <div class="form-group">
-              <div class="error" *ngIf="form.invalid && form.dirty">
-                  <p>Form is Invalid..!</p>
-              </div>
-              <button 
-                [disabled]="form.invalid" 
-              type="submit" class="button_form" id="sendMessageButton" 
-               >Send</button>
-            </div>
-          </form>
-        </div> 
-      </div>
+          </div>
+          <br>
 
+          <div class="form-group">
+            <div class="error" *ngIf="submitted && form.invalid && form.dirty">
+              <p>Form is Invalid..!</p>
+            </div>
+            <button  type="submit" class="button_form" id="sendMessageButton">Send</button>
+          </div>
+        </form>
+      </div>
     </div>
-  </section>
+
+  </div>
+</section>
